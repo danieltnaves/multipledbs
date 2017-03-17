@@ -30,10 +30,10 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     @Transactional
-    public void update(Customer customer) {
+    public void update(Customer customer) throws Exception {
         CustomerContextHolder.setCustomerType(CustomerType.DB1);
         customerRepository.update(customer);
-
+        if (true) throw new Exception();
         CustomerContextHolder.setCustomerType(CustomerType.DB2);
         customerRepository.update(customer);
     }

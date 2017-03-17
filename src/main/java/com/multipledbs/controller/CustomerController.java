@@ -41,7 +41,7 @@ public class CustomerController {
     }
 
     @RequestMapping("/update")
-    public void update() {
+    public void update() throws Exception {
         final Customer customer = new Customer();
         customer.setId(1);
         customer.setFirstName("Transaction test name");

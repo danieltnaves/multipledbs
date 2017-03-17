@@ -13,6 +13,6 @@ import com.multipledbs.domain.Customer;
 public interface CustomerService {
 
     List<Customer> list();
-    void update(Customer customer);
+    void update(Customer customer) throws Exception;
 
 }
