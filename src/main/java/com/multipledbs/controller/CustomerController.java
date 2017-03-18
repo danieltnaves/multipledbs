@@ -7,18 +7,23 @@ import com.multipledbs.config.CustomerContextHolder;
 import com.multipledbs.domain.Customer;
 import com.multipledbs.domain.CustomerType;
 import com.multipledbs.service.CustomerService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @author tqi_dnaves
+ * @author danieltnaves
  * @version $Revision: $<br/>
  *          $Id: $
  * @since 3/17/17 11:56 AM
  */
 @RestController
 public class CustomerController {
+
+    private static final Logger log = LoggerFactory.getLogger(CustomerController.class);
 
     @Autowired
     private CustomerService customerService;
@@ -41,12 +46,17 @@ public class CustomerController {
     }
 
     @RequestMapping("/update")
-    public void update() throws Exception {
-        final Customer customer = new Customer();
-        customer.setId(1);
-        customer.setFirstName("Transaction test name");
-        customer.setLastName("Transaction test last name");
-        customerService.update(customer);
+    public void update() {
+        try {
+            final Customer customer = new Customer();
+            customer.setId(1);
+            customer.setFirstName("Transaction test name 2");
+            customer.setLastName("Transaction test last name 2");
+            customerService.update(customer);
+        } catch (RuntimeException e) {
+            log.error("Transaction error [roll back]", e);
+        }
+
     }
 
 }

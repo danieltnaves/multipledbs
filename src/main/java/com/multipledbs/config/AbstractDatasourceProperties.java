@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 
 /**
- * @author tqi_dnaves
+ * @author danieltnaves
  * @version $Revision: $<br/>
  *          $Id: $
  * @since 3/17/17 2:48 PM

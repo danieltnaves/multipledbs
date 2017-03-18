@@ -10,9 +10,10 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import com.multipledbs.domain.Customer;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
- * @author tqi_dnaves
+ * @author danieltnaves
  * @version $Revision: $<br/>
  *          $Id: $
  * @since 3/17/17 11:09 AM

@@ -1,7 +1,7 @@
 package com.multipledbs.domain;
 
 /**
- * @author tqi_dnaves
+ * @author danieltnaves
  * @version $Revision: $<br/>
  *          $Id: $
  * @since 3/17/17 11:45 AM

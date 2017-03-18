@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 /**
- * @author tqi_dnaves
+ * @author danieltnaves
  * @version $Revision: $<br/>
  *          $Id: $
  * @since 3/17/17 12:00 PM
